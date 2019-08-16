@@ -1,0 +1,5 @@
+linear_axis_num: 1
+angular_axis_num: 0
+safe_button_num: 5
+max_linear_vel: 0.8
+max_angular_vel: 0.5

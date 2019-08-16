@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <node pkg="iqr_teleop" type="keyboard_teleop" name="keyboard_teleop" output="screen">
+    <param name="max_linear_vel" type="double" value="0.1"/>
+    <param name="max_angular_vel" type="double" value="0.1"/>
+    <remap from="keyboard_teleop/cmd_vel" to="cmd_vel"/>
+  </node>
+
+</launch>

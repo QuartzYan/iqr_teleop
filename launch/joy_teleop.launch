@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <node pkg="joy" type="joy_node" name="joy_node">
+    <param name="dev" type="string" value="/dev/input/js0"/>
+  </node>
+
+  <node pkg="iqr_teleop" type="joy_teleop" name="joy_teleop" output="screen">
+    <param name="max_linear_vel" type="double" value="0.5"/>
+    <param name="max_angular_vel" type="double" value="0.3"/>
+    <rosparam command="load" file="$(find iqr_teleop)/config/xbox_config.yaml"/>
+    <remap from="joy_teleop/cmd_vel" to="cmd_vel"/>
+  </node>
+
+</launch>
